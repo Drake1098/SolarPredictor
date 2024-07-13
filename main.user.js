@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Solar Predictor
 // @namespace    Violentmonkey Scripts
-// @version      2.2
+// @version      2.1
 // @description  Solar Predictor
 // @author       @Drake
 // @match        https://bloxflip.com/*
