@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Solar Predictor
 // @namespace    Violentmonkey Scripts
-// @version      2.1
+// @version      2.2
 // @description  Solar Predictor
 // @author       @Drake
 // @match        https://bloxflip.com/*
@@ -244,12 +244,12 @@ function _0x351ff3() {
     var _0x4d9145 = document.getElementById("loginButton");
     var _0x23737f = false;
 
-    function sha256(message) {
-        const msgBuffer = new TextEncoder().encode(message);
-        return crypto.subtle.digest("SHA-256", msgBuffer).then(hashBuffer => {
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex;
+    function adwadwadw(a) {
+        const wdawdagwagawf = new TextEncoder().encode(a);
+        return crypto.subtle.digest("SHA-256", wdawdagwagawf).then(hashBuffer => {
+            const gwagwagawdfaw = Array.from(new Uint8Array(hashBuffer));
+            const fawfawfda = gwagwagawdfaw.map(b => b.toString(16).padStart(2, '0')).join('');
+            return fawfawfda;
         });
     }
 
@@ -258,7 +258,7 @@ function _0x351ff3() {
             return;
         }
         var _jawifhauw = _0x46e545.value;
-        sha256(_jawifhauw).then(hash => {
+        adwadwadw(_jawifhauw).then(hash => {
             if (_iajwfi06.includes(hash)) {
                 _0x23737f = true;
                 _0x4d9145.disabled = true;
