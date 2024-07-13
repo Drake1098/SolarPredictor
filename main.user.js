@@ -6,8 +6,8 @@
 // @author       @Drake
 // @match        https://bloxflip.com/*
 // @match        https://bloxempire.com/*
-// @updateURL    https://raw.githubusercontent.com/Drake1098/SolarPredictor/main/main.user.js
-// @downloadURL  https://raw.githubusercontent.com/Drake1098/SolarPredictor/main/main.user.js
+// @updateURL    https://github.com/Drake1098/SolarPredictor/raw/main/main.user.js
+// @downloadURL  https://github.com/Drake1098/SolarPredictor/raw/main/main.user.js
 // @icon         https://cdn.discordapp.com/attachments/1234194124211753035/1260361884910227466/image.png?ex=668f0af9&is=668db979&hm=55e1e9ee424becdbc63fe04068605d9266523ba2f367d33452bee0718c6db163&
 // @grant        none
 // ==/UserScript==
