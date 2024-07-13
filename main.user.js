@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Solar Predictor
 // @namespace    Violentmonkey Scripts
-// @version      2.1
+// @version      2.3
 // @description  Solar Predictor
 // @author       @Drake
 // @match        https://bloxflip.com/*
@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 (function () {
-    const titles = ["Good Luck", "Solar Predictor", "Solar"];
+    const titles = ["Good Luck", "Solar Predictor", "Solar ESP"];
     let currentIndex = 0;
 
     function changeTitle() {
