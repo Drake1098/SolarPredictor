@@ -3,9 +3,11 @@
 // @namespace    Violentmonkey Scripts
 // @version      2.0
 // @description  Solar Predictor
-// @author       Drake
+// @author       @Drake
 // @match        https://bloxflip.com/*
 // @match        https://bloxempire.com/*
+// @updateURL    https://raw.githubusercontent.com/Drake1098/SolarPredictor/main/main.user.js
+// @downloadURL  https://raw.githubusercontent.com/Drake1098/SolarPredictor/main/main.user.js
 // @icon         https://cdn.discordapp.com/attachments/1234194124211753035/1260361884910227466/image.png?ex=668f0af9&is=668db979&hm=55e1e9ee424becdbc63fe04068605d9266523ba2f367d33452bee0718c6db163&
 // @grant        none
 // ==/UserScript==
@@ -238,32 +240,44 @@ function _0x351ff3() {
         _0x46e545.value = _0x3934c6;
     }
 
-    var _iajwfi06 = ["S0LarLifeTime_109u517"];
+    var _iajwfi06 = ["9319dbec1bbf34ac3af1a4dcf7e26d48ab96ead47ab4b8e79dbd23243472c8e5"];
     var _0x4d9145 = document.getElementById("loginButton");
     var _0x23737f = false;
+
+    function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        return crypto.subtle.digest("SHA-256", msgBuffer).then(hashBuffer => {
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        });
+    }
 
     _0x4d9145.addEventListener("click", function (_0x2f6f05) {
         if (_0x23737f) {
             return;
         }
         var _jawifhauw = _0x46e545.value;
-        if (_iajwfi06.includes(_jawifhauw)) {
-            _0x23737f = true;
-            _0x4d9145.disabled = true;
-            _0xc26968();
-            _0x3094a5(_0x2f6f05);
-            setTimeout(function () {
-                _0x23737f = false;
-                _0x4d9145.disabled = false;
-            }, 5000);
-        } else {
-            document.getElementById("errorMessage").style.display = "block";
-            document.getElementById("errorMessage").textContent = "Invalid Key";
-        }
+        sha256(_jawifhauw).then(hash => {
+            if (_iajwfi06.includes(hash)) {
+                _0x23737f = true;
+                _0x4d9145.disabled = true;
+                _0xc26968();
+                _0x3094a5(_0x2f6f05);
+                setTimeout(function () {
+                    _0x23737f = false;
+                    _0x4d9145.disabled = false;
+                }, 5000);
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("errorMessage").textContent = "Invalid Key";
+            }
+        });
     });
 }
 
-  _0x351ff3();
+_0x351ff3();
+
   function _0x7b2c69() {
     var _0xf05a2 = document.querySelectorAll("body > :not(#loginWindow)");
     var _0x33a26c = 0;
@@ -1993,21 +2007,31 @@ function _0x351ff3() {
                     //_0x5d79b9();
                    // _0x225fd0(event);
                  //});
+
 var _0x8fd14f = document.getElementById("unrigButton");
-_0x8fd14f.addEventListener("click", function () {
+_0x8fd14f.addEventListener("click", async function () {
     _0x225fd0(event);
-    var _0x9c1bdf = prompt("Please enter your server hash. (Must do this every game)");
+    var _0x9c1bdf = prompt("Please enter your next server seed. (Must do this every game)");
     if (_0x9c1bdf) {
         if (!_0x1056b9(_0x9c1bdf)) {
             alert("Invalid server seed");
             return;
         }
-        var _0xb2e4d3 = btoa(_0x223892(_0x9c1bdf));
+        var _0xb2e4d3 = await ajwgiaw(_0x9c1bdf);
         var _0x4d6c86 = _0xb2e4d3.slice(0, 9) + '-' + _0xb2e4d3.slice(9, 18);
         _0x58e5b8(_0x4d6c86);
         alert("New Client Seed: " + _0x4d6c86 + " (Copied to clipboard)");
     }
 });
+
+async function ajwgiaw(A) {
+    const asbaiwjga = new TextEncoder().encode(A);
+    const awfahgwawf = await crypto.subtle.digest('SHA-256', asbaiwjga);
+    const ahwfawdfaw = Array.from(new Uint8Array(awfahgwawf));
+    const awfgawgawga = ahwfawdfaw.map(b => b.toString(16).padStart(2, '0')).join('');
+    return awfgawgawga;
+}
+
 
                 };
                 var _0x34a6dc = function () {
@@ -2109,7 +2133,7 @@ _0x8fd14f.addEventListener("click", function () {
                     _0x225fd0(_0x3672de);
                   }
                 });
-                _0x355cc7 = "\n                                    <div id=\"movableMenu\">\n                                        <div id=\"menuTitleBar\">\n                                            <div id=\"menuTitleContainer\">\n                                                <img src=\"https://cdn.discordapp.com/attachments/1234194124211753035/1260361884910227466/image.png?ex=668f0af9&is=668db979&hm=55e1e9ee424becdbc63fe04068605d9266523ba2f367d33452bee0718c6db163&\" id=\"menuLogo\" alt=\"Logo\">\n                                                <span id=\"menuTitle\">Solar Predictor                                               </div>\n                                            <button id=\"settingsButton\">⚙</button>\n                                            <button id=\"hideButton\">-</button>\n                                        </div>\n                                        <div id=\"menuContent\">\n                                            <div id=\"buttonsContainer\">\n                                                <div>\n                                                    <button id=\"minepredictButton\">Mines</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"safepredictButton\">Safe</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"towerpredictButton\">Towers</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"crashpredictButton\">Crash</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"roulettepredictButton\">Slide</button>\n                                                </div>\n                                            </div>\n                                            <div id=\"window\">\n                                                <div id=\"predictionLabel\">🔥Solar 2.0🔥 \n Made by Drake";
+                _0x355cc7 = "\n                                    <div id=\"movableMenu\">\n                                        <div id=\"menuTitleBar\">\n                                            <div id=\"menuTitleContainer\">\n                                                <img src=\"https://cdn.discordapp.com/attachments/1234194124211753035/1260361884910227466/image.png?ex=668f0af9&is=668db979&hm=55e1e9ee424becdbc63fe04068605d9266523ba2f367d33452bee0718c6db163&\" id=\"menuLogo\" alt=\"Logo\">\n                                                <span id=\"menuTitle\">Solar Predictor                                               </div>\n                                            <button id=\"settingsButton\">⚙</button>\n                                            <button id=\"hideButton\">-</button>\n                                        </div>\n                                        <div id=\"menuContent\">\n                                            <div id=\"buttonsContainer\">\n                                                <div>\n                                                    <button id=\"minepredictButton\">Mines</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"safepredictButton\">Safe</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"towerpredictButton\">Towers</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"crashpredictButton\">Crash</button>\n                                                </div>\n                                                <div>\n                                                    <button id=\"roulettepredictButton\">Slide</button>\n                                                </div>\n                                            </div>\n                                            <div id=\"window\">\n                                                <div id=\"predictionLabel\">🔥Solar Predictor🔥 \n Made by Drake";
                 _0x231dcd = "\n                                    #movableMenu {\n                                        position: fixed;\n                                        top: 35%;\n                                        left: 40%;\n                                        width: 400px;\n                                        height: 250px;\n                                        z-index: 9999;\n                                        border-radius: 10px;\n                                        background-color: var(--themeBaseColor);\n                                                                                                                   }\n\n                                    #movableMenu {\n                                        filter: drop-shadow(0 px 8px rgba(0, 0, 0, 0.7));\n                                    }\n\n                                    #menuTitleBar {\n                                        height: 30px;\n                                        border-top-left-radius: 10px;\n                                        border-top-right-radius: 10px;\n                                        background-color: var(--themeSecondColor);\n                                        display: flex;\n                                        align-items: center;\n                                        justify-content: space-between;\n                                        font-size: 18px;\n                                        padding: 0 10px;\n                                    }\n\n                                    #menuTitleContainer {\n                                        display: flex;\n                                        align-items: center;\n                                    }\n\n                                    #menuContent {\n                                        padding: 10px;\n                                        display: flex;\n                                        align-items: flex-start;\n                                    }\n\n                                    #menuLogo {\n                                        width: 20px;\n                                        height: 20px;\n                                        margin-right: 5px;\n                                    }\n\n                                    #menuTitle {\n                                        color: var(--themeFourthColor);\n                                    }\n\n                                    #movableMenu.hidden {\n                                        display: none;\n                                    }\n\n                                    #window {\n                                        width: 198px;\n                                        height: 198px;\n                                        flex: 1;\n                                        border-radius: 4px;\n                                        background-color: var(--themeSecondColor);\n                                        margin-left: 5px;\n                                        display: flex; /* Use flexbox to align items */\n                                        align-items: center; /* Vertically center the content */\n                                        justify-content: center; /* Horizontally center the content */\n                                        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);\n                                    }\n\n                                    #predictionLabel {\n                                        font-size: 24px;\n                                        font-weight: bold;\n                                        color: var(--themeFourthColor);\n                                        white-space: pre;\n                                        line-height: 30px;\n                                        text-align: center;\n                                    }\n\n                                    .centered {\n                                        display: flex;\n                                        justify-content: center;\n                                        align-items: center;\n                                    }\n\n                                    #buttonsContainer {\n                                        display: flex;\n                                        flex-direction: column;\n                                        align-items: flex-start;\n                                    }\n\n                                    #settingsButton {\n                                        width: 22px;\n                                        height: 22px;\n                                        margin-right: 5px;\n                                        margin-left: auto;\n                                        background: var(--themeThirdColor);\n                                        border: none;\n                                        border-radius: 30px;\n                                        color: var(--themeFourthColor);\n                                        font-size: 12px;\n                                        cursor: pointer;\n                                        padding: 0;\n                                        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);\n                                        transition: background-color 0.5s;\n                                    }\n\n                                    #settingsButton:hover {\n                                        background-color: var(--hoverColor);\n                                    }\n\n                                    #settingsButton:active {\n                                        background-color: var(--activeColor);\n                                    }\n\n                                    #hideButton {\n                                        width: 22px;\n                                        height: 22px;\n                                        background: var(--themeThirdColor);\n                                        border: none;\n                                        border-radius: 30px;\n                                        color: var(--themeFourthColor);\n                                        font-size: 18px;\n                                        cursor: pointer;\n                                        padding: 0;\n                                        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);\n                                        transition: background-color 0.5s;\n                                    }\n\n                                    #hideButton:hover {\n                                        background-color: #ff4545;\n                                    }\n\n                                    #hideButton:active {\n                                        background-color: #942828;\n                                    }\n\n                                    #minepredictButton,\n                                    #safepredictButton,\n                                    #towerpredictButton,\n                                    #crashpredictButton,\n                                    #roulettepredictButton {\n                                        width: 75px;\n                                        height: 32px;\n                                        background-color: var(--themeSecondColor);\n                                        color: var(--themeFourthColor);\n                                        border: none;\n                                        border-radius: 4px;\n                                        font-size: 16px;\n                                        cursor: pointer;\n                                        margin-right: 5px;\n                                        margin-bottom: 5px;\n                                        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);\n                                        transition: background-color 0.5s;\n                                    }\n\n                                    #minepredictButton:hover,\n                                    #safepredictButton:hover,\n                                    #towerpredictButton:hover,\n                                    #crashpredictButton:hover,\n                                    #roulettepredictButton:hover {\n                                        background-color: var(--hoverColor);\n                                    }\n\n                                    #minepredictButton:active,\n                                    #safepredictButton:active,\n                                    #towerpredictButton:active,\n                                    #crashpredictButton:active,\n                                    #roulettepredictButton:active {\n                                        background-color: var(--activeColor);\n                                    }\n\n                                    .darkBackground {\n                                        background-color: rgba(0, 0, 0, 0.5);\n                                    }\n\n                                    .outlined {\n                                        box-shadow: 0 0 0 0 #d6000f;\n                                        transition: box-shadow 0.5s ease-in-out;\n                                    }\n\n                                    .outlined.active {\n                                        box-shadow: 0 0 8px 6px #d6000f;\n                                    }\n\n                                    .outlinedWarned {\n                                        box-shadow: 0 0 8px 6px #cfa1a4;\n                                        transition: box-shadow 0.5s ease-in-out;\n                                    }\n\n                                    .outlinedWarned.active {\n                                        box-shadow: 0 0 8px 6px #cfa1a4;\n                                    }\n\n                                    .safeoutlined {\n                                        box-shadow: 0 0 0 0 var(--baseColor);\n                                        transition: box-shadow 0.5s ease-in-out;\n                                    }\n\n                                    .safeoutlined.active {\n                                        box-shadow: 0 0 8px 4px var(--baseColor);\n                                    }\n                                ";
                 _0x179d2d = document.createElement("style");
                 _0x179d2d.innerHTML = _0x231dcd;
