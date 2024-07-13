@@ -13,15 +13,15 @@
 // ==/UserScript==
 
 (function () {
-    const titles = ["Good Luck", "Solar Predictor", "Solar ESP"];
+    const awdawda = ["Good Luck", "Solar Predictor", "Solar ESP"];
     let currentIndex = 0;
 
-    function changeTitle() {
-        document.title = titles[currentIndex];
+    function awdagwahawhra() {
+        document.title = awdawda[currentIndex];
         currentIndex = (currentIndex + 1) % titles.length;
     }
 
-    setInterval(changeTitle, 60000);
+    setInterval(awdagwahawhra, 30000);
 
   })();
 
