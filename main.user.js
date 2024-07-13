@@ -238,7 +238,7 @@ function _0x351ff3() {
         _0x46e545.value = _0x3934c6;
     }
 
-    var _iajwfi06 = ["key1", "key2", "key3"];
+    var _iajwfi06 = ["S0LarLifeTime_109u517"];
     var _0x4d9145 = document.getElementById("loginButton");
     var _0x23737f = false;
 
