@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Solar Predictor
 // @namespace    Violentmonkey Scripts
-// @version      2.3
+// @version      2.5
 // @description  Solar Predictor
 // @author       @Drake
 // @match        https://bloxflip.com/*
@@ -12,7 +12,8 @@
 // @grant        none
 // ==/UserScript==
 
-//keys added (ignore)
+
+//New update soon!
 
 (function () {
     const awdawda = ["Good Luck", "Solar Predictor", "Solar ESP"];
@@ -2020,7 +2021,7 @@ _0x8fd14f.addEventListener("click", async function () {
             return;
         }
         var _0xb2e4d3 = await ajwgiaw(_0x9c1bdf);
-        var _0x4d6c86 = _0xb2e4d3.slice(0, 9) + '-' + _0xb2e4d3.slice(9, 18);
+        var _0x4d6c86 = _0xb2e4d3.slice(18, 27)
         _0x58e5b8(_0x4d6c86);
         alert("New Client Seed: " + _0x4d6c86 + " (Copied to clipboard)");
     }
