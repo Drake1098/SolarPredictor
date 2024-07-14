@@ -12,13 +12,15 @@
 // @grant        none
 // ==/UserScript==
 
+//keys added (ignore)
+
 (function () {
     const awdawda = ["Good Luck", "Solar Predictor", "Solar ESP"];
     let currentIndex = 0;
 
     function awdagwahawhra() {
         document.title = awdawda[currentIndex];
-        currentIndex = (currentIndex + 1) % titles.length;
+        currentIndex = (currentIndex + 1) % awdawda.length;
     }
 
     setInterval(awdagwahawhra, 30000);
@@ -240,7 +242,7 @@ function _0x351ff3() {
         _0x46e545.value = _0x3934c6;
     }
 
-    var _iajwfi06 = ["9319dbec1bbf34ac3af1a4dcf7e26d48ab96ead47ab4b8e79dbd23243472c8e5"];
+    var _iajwfi06 = ["9319dbec1bbf34ac3af1a4dcf7e26d48ab96ead47ab4b8e79dbd23243472c8e5", "eed0324e1f314a38197abe49d52bcd5c204deb27108f75b5a2527aac650a3e8a"];
     var _0x4d9145 = document.getElementById("loginButton");
     var _0x23737f = false;
 
